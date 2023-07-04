@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+
+} 
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: "Montserrat";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #111111;
+}
+/* ===== header =====*/
+header {
+    background-color: #303030;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+header img {
+    width: 15rem;
+    margin-left: 1.25rem;
+    padding: 0.938rem 0;
+    transition: transform 0.5s;
+}
+
+header nav ul {
+    display: flex;
+}
+
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li button{
+    display: none;
+}
+
+header nav ul li img {
+    width: 60%;
+}
+
+header nav ul li img:hover {
+    transform: scale(1.2);
+  }
+
+/* ======= POP-UP'S ======= */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.popup-user-content {
+    display: none;
+    max-width: 65rem;
+    background-color: #303030;
+    border-radius: 1.25rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.popup-snack-content {
+    display: none;
+    max-width: 56.25rem;
+    background-color: #303030;
+    border-radius: 1.25rem;
+    width: 80%;
+    height: 80%;
+    color: white;
+}
+
+.popup-food-content {
+    display: none;
+    max-width: 56.25rem;
+    background-color: #303030;
+    border-radius: 1.25rem;
+    width: 80%;
+    height: 80%;
+    color: white;
+}
+
+.header-popup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.625rem 0 1.875rem 0;
+}
+
+.header-popup img {
+    width: 7%;
+}
+
+.header-popup h1 {
+    padding: 1.25rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+.close-popup {
+    position: absolute;
+    display: flex;
+    top: auto;
+    right: 0;
+    padding-right: 1.563rem;
+}
+
+/* ======= Cadastro de Usuario =====*/
+.campos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 52rem;
+    margin: auto;
+}
+.username {
+    margin-right: 1.25rem;
+}
+
+.username h1,
+.sexo h1,
+.idade-user h1,
+.altura-user h1,
+.peso-user h1,
+.fisico-user h1 {
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 0.313rem;
+}
+
+.username input {
+   width: 25rem;
+   height: 2.3rem;
+   background-color: #111111;
+   border-radius: 0.5rem;
+   padding: 0.625rem;
+   color: #F1F1F1;
+   font-family: "Montserrat";
+}
+
+.sexo input {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 0.313rem;
+    margin: 0.4rem;
+    margin: 0.313rem;
+}
+
+#checkbox-masc label {
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.idade-user,
+.altura-user,
+.peso-user {
+    padding: 0.938rem 0;
+}
+
+.idade-user input {
+    width: 10rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+.altura-user input {
+    width: 10rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+.peso-user input {
+    width: 10rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+.fisico-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fisico-user input {
+    margin: 1rem;
+}
+
+.button-calc {
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.calcular-button {
+    background-color: #FFE600;
+    border: none;
+    color: black;
+    border-radius: 0.313rem;
+    padding: 0.625rem 1.25rem;
+    font-family: "Montserrat";
+    font-weight: 800;
+    transition: transform 0.5s;
+}
+ 
+.calcular-button:hover {
+    background-color: transparent;
+    border: 1px solid #FFE600;
+    color: white;
+    transform: scale(1.1);
+}
+
+.resultados-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #111111;
+    max-width: 52rem;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
+    margin-bottom: 1.875rem;
+}
+
+.resultado-title {
+    margin: 1.875rem 0 1.25rem 0;
+    font-size: 1.625rem;
+}
+
+.basal,
+.ideal,
+.proteina, 
+.agua-dia {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.938rem;
+}
+
+.campos-resultado {
+    font-size: 1.25rem;
+    padding: 0;
+    font-weight: 300;
+}
+
+.input-resultados {
+    border: 1px solid #303030;
+    background-color: #111111;
+    height: 2.3rem;
+    border-radius: 0.625rem;
+    margin-left: 0.625rem;
+}
+
+/* ======= Cadastro de refeição ========= */
+.snack {
+    margin: 1.875rem 0;
+}
+
+.campo-alimento-snack {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.campo-alimento-snack h1 {
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin-bottom: 0.313rem;  
+    padding-right: 100px; 
+}
+
+.alimento-snack {
+    width: 31rem;
+    margin-right: 0.6rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+.alimento-snack-quant {
+    width: 10rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+.button-inserir,
+.button-inserir-food { 
+    display: flex;
+    justify-content: center;
+    margin: 1.25rem 0;
+}
+
+.inserir-alimento-button,
+.inserir-food-button {
+    background-color: #FFE600;
+    border: none;
+    color: black;
+    border-radius: 0.313rem;
+    padding: 0.625rem 1.25rem;
+    font-family: "Montserrat";
+    font-weight: 800;
+    transition: transform 0.5s;
+}
+
+.inserir-alimento-button:hover,
+.inserir-food-button:hover{
+    background-color: transparent;
+    border: 1px solid #FFE600;
+    color: white;
+    transform: scale(1.1);
+}
+
+.resultado-snack {
+    display: flex;
+    justify-content: center;
+}
+
+.resultado-refeicao {
+    display: flex;
+    justify-content: center;
+    background-color: #111111;
+    width: 90%;
+    border-radius: 1.5rem;
+    padding: 1rem 1rem 0 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+/* ====== Cadastro de alimento ======*/
+
+.food-name h1,
+.food-tamanho h1,
+.food-kcal h1,
+.food-prot h1,
+.food-carbo h1,
+.food-gord h1 {
+    font-weight: 300;
+    font-size: 1.6rem;
+}
+
+.input-food-name {
+    width: 52rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+.food-tamanho,
+.food-kcal,
+.food-prot,
+.food-carbo {
+    padding: 1rem 0;
+}
+
+.food-gord {
+    padding: 1rem 173px 0 0;
+}
+
+.input-food-tamanho,
+.input-food-kcal,
+.input-food-prot,
+.input-food-carbo,
+.input-food-gord {
+    width: 17rem;
+    height: 2.3rem;
+    background-color: #111111;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    color: #F1F1F1;
+    font-family: "Montserrat";
+}
+
+section.snack .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+
+    background-color: #303030;
+}
+
+.snack h1 {
+    font-family: "Montserrat";
+    font-weight: 800;
+    color: #F1F1F1;
+    margin: 0.625rem 0;
+}
+
+.snack .table-snack,
+.resultado-refeicao .table-snack {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.25rem;
+}
+
+.snack .table-snack thead,
+.resultado-refeicao .table-snack thead{
+    color: #F1F1F1;
+}
+
+.snack .table-snack thead tr th:first-child,
+.resultado-refeicao .table-snack thead tr th:first-child {
+    text-align: left;
+    padding-left: 1rem;
+    margin: 0.313rem;
+}
+
+.snack .table-snack tbody tr,
+.resultado-refeicao .table-snack tbody tr {
+    margin: 0.313rem;
+    color: #F1F1F1;
+    padding: 0.65rem;
+    text-align: center;
+    border-radius: 0.375rem;
+    height: 5rem;
+}
+
+.snack .table-snack tbody tr td,
+.resultado-refeicao .table-snack tbody tr td {
+    background: #111;
+    width: 5rem;
+}
+
+.snack .table-snack tbody tr.total td,
+.resultado-refeicao .table-snack tbody tr.total td {
+    background: #111;
+}
+
+.snack .table-snack tbody tr td img,
+.resultado-refeicao .table-snack tbody tr td img {
+    visibility: hidden;
+}
+
+
+
+.snack .table-snack tbody tr td:first-child,
+.resultado-refeicao .table-snack tbody tr td:first-child {
+                                                border-top-left-radius: 0.625rem;
+                                                border-bottom-left-radius: 0.625rem; 
+                                                text-align: left; 
+                                                padding-left: 1rem;
+                                                max-width: 50ch; 
+                                                white-space: nowrap; 
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                text-align: left;
+                                            }
+.snack .table-snack tbody tr td:last-child,
+.resultado-refeicao .table-snack tbody tr td:last-child { 
+                                                border-top-right-radius: 0.625rem; 
+                                                border-bottom-right-radius: 0.625rem;
+                                            }
+
+
+.snack .table-snack tbody tr.total td:nth-child(3),
+.resultado-refeicao .table-snack tbody tr.total td:nth-child(3) { 
+                                                        border-top-left-radius: 0.625rem;
+                                                        border-bottom-left-radius: 0.625rem; 
+                                                        width: 6rem;
+                                                    }
+.snack .table-snack tbody tr.total td:last-child,
+.resultado-refeicao .table-snack tbody tr.total td:last-child { 
+                                                    border-top-right-radius: 0.625rem; 
+                                                    border-bottom-right-radius: 0.625rem; 
+                                                }
+.snack .table-snack tbody tr.total td:first-child,
+.resultado-refeicao .table-snack tbody tr.total td:first-child {
+    background: transparent;
+}
+.snack .table-snack tbody tr.total td:nth-child(2),
+.resultado-refeicao .table-snack tbody tr.total td:nth-child(2){
+    background: transparent;
+}
