@@ -17,7 +17,7 @@ Projeto integrador sétimo semestre, Sistemas de Informação - UNIVAG.
 <br>
 
 <p align="center">
-  <img alt="Tela principal" src=".github/preview.jpg" width="100%">
+  <img alt="Tela principal" src=".github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
